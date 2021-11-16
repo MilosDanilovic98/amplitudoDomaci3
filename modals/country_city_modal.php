@@ -45,7 +45,7 @@
 
 <script>
 
-  //Gets all the cities for the selected countrie
+  //Gets all the cities for the selected country
   async function fetchCities(){
 
     //get the dom elements
@@ -61,7 +61,7 @@
 
     let citiesTxt = "";
 
-    //check if city matches the countrie
+    //check if city matches the country
     cities.forEach(city => {
       citiesTxt += `<option id="city_${city.id}" value="${city.name}">${city.name}</option>`;
 
@@ -69,7 +69,7 @@
 
     citiesMenu.innerHTML = citiesTxt;
 
-    //Checks if the Countrie is Selected and enables the submit button based on that
+    //Checks if the country is Selected and enables the submit button based on that
     if(selectedCountry != 0) submitBtn.disabled = false;
     else submitBtn.disabled = true;
 
